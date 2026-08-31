@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Share Tech Mono', 'Fira Code', monospace;
+    background-color: #030804;
+  }
+}
+
+/* Scanlines overlay */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for Terminal Windows */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #021206;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff6644;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff6688;
+}
+
+/* Neon Glow utilities */
+.glow-green {
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.6), 0 0 16px rgba(0, 255, 102, 0.3);
+}
+
+.glow-amber {
+  text-shadow: 0 0 8px rgba(255, 170, 0, 0.6), 0 0 16px rgba(255, 170, 0, 0.3);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6), 0 0 16px rgba(0, 229, 255, 0.3);
+}
+
+.box-glow-green {
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.25), inset 0 0 10px rgba(0, 255, 102, 0.05);
+}
+
+.box-glow-amber {
+  box-shadow: 0 0 15px rgba(255, 170, 0, 0.25), inset 0 0 10px rgba(255, 170, 0, 0.05);
+}
+
+.box-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.25), inset 0 0 10px rgba(0, 229, 255, 0.05);
+}
+
+@keyframes pulse-fast {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-cursor {
+  animation: pulse-fast 0.8s infinite;
+}

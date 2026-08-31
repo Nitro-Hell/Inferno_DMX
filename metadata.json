@@ -1,0 +1,6 @@
+{
+  "name": "Cyber Security Simulation Suite",
+  "description": "Professional network security and cryptographic simulation workstation featuring brute-force verification, proof-of-work node, automated compiler stream, and interactive console.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
